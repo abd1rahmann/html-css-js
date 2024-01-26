@@ -1,0 +1,15 @@
+$color-yellow: #F9D783;
+$color-dark: #191919;
+@mixin
+
+
+@function set-dynamic-color($value, $procent: 50%, $lightness: 52) 
+{
+    @if (lightness($value) > $lightness) {
+        @return darken ($value, $procent);
+    }
+    @else {
+        @return lighten ($color, $procent);
+}
+
+}
